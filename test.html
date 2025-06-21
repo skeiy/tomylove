@@ -1,0 +1,61 @@
+06.28 12:00 AM
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>You Received a Letter</title>
+  <style>
+    body {
+      margin: 0;
+      background: #fff0f5;
+      font-family: 'Georgia', serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      flex-direction: column;
+    }
+
+    .envelope-img {
+      width: 450px;
+      max-width: 40vw;
+      transition: transform 0.4s ease-in-out;
+      cursor: pointer;
+    }
+
+    .tap-text {
+      margin-top: 30px;
+      font-size: 18px;
+      color: #b96c8a;
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0% { opacity: 0.6; }
+      50% { opacity: 1; }
+      100% { opacity: 0.6; }
+    }
+  </style>
+</head>
+<body>
+
+  <img id="envelope" class="envelope-img" src="env.png" alt="Closed Envelope" onclick="openLetter()" />
+  <div class="tap-text">Tap to open :3</div>
+
+  <script>
+    function openLetter() {
+      const envelope = document.getElementById('envelope');
+      envelope.src = "env2.png"; // opens to second image
+      envelope.style.transform = "scale(1.00)";
+      
+      setTimeout(() => {
+        window.location.href = "test2.html"; // go to next page
+      }, 2000);
+    }
+  </script>
+</body>
+</html>
+
