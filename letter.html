@@ -1,0 +1,163 @@
+06.28 12:00 AM
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Love Letter</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: #fff0f5;
+      font-family: 'Georgia', serif;
+      overflow-x: hidden;
+    }
+
+    .wrapper {
+      padding: 20px;
+      max-width: 600px;
+      margin: 60px auto 40px;
+      background: white;
+      border-radius: 20px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+      position: relative;
+    }
+
+    .decor-left, .decor-right {
+      position: absolute;
+      top: 20px;
+      width: 40px;
+      height: auto;
+    }
+
+    .decor-left {
+      left: -50px;
+    }
+
+    .decor-right {
+      right: -50px;
+    }
+
+    .photo {
+      width: 100%;
+      max-height: 250px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 15px;
+    }
+
+    h2 {
+      text-align: center;
+      color: #a64d79;
+    }
+
+    p {
+      line-height: 1.6;
+      color: #4d2c34;
+    }
+
+    .signature {
+      margin-top: 30px;
+      text-align: right;
+      font-style: italic;
+    }
+
+    @media (max-width: 600px) {
+      .decor-left, .decor-right {
+        display: none;
+      }
+
+      .wrapper {
+        margin-top: 20px;
+      }
+    }
+
+    /*  PETAL ANIMATION */
+    .petal {
+      position: fixed;
+      top: -50px;
+      width: 30px;
+      height: 30px;
+      background-image: url('ptl.png'); /* cute pink flower */
+      background-size: cover;
+      pointer-events: none;
+      animation: fall linear infinite;
+      z-index: 0;
+    }
+
+    @keyframes fall {
+      0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(100vh) rotate(360deg);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!--  Petal container -->
+  <script>
+    function createPetal() {
+      const petal = document.createElement("div");
+      petal.classList.add("petal");
+      petal.style.left = Math.random() * 100 + "vw";
+      petal.style.animationDuration = (5 + Math.random() * 5) + "s";
+      document.body.appendChild(petal);
+
+      setTimeout(() => {
+        petal.remove();
+      }, 10000);
+    }
+
+    setInterval(createPetal, 300);
+  </script>
+
+  <div class="wrapper">
+    <img src="aple.png" class="decor-left" alt="apple">
+    <img src="hart.png" class="decor-right" alt="heart">
+
+    <!-- Replace this with your own photo -->
+    <img src="ji_and_i.jpg" class="photo">
+
+    <h2>To My Greatest Love, John Isavic,</h2>
+    <p>
+      Happiest birthday, baby!
+</p>
+<p>
+I know I tell you this a lot, but today especially, I want you to know how proud I am. Proud of everything you've done and accomplished, 
+proud of who've you become. You've been through a lot, yet you fight and push through. Even if it becomes too complex and hard. You faced them with a
+brave face, and even with a smile. You never gave up, fighting, trying to make everything better.
+</p>
+<p>
+You inspire me so much. Even more than you realize. You make me want to do better in my life. You help me push through, to be softer, be braver. I hope you 
+realize that there are so much more to you than you think.
+</p>
+<p>
+I hope the next chapter of your life brings you peace; a light through your dark times; a genuine happiness; kindness; and safety. You deserve so much.
+You've been nothing but patient with me. You loved me in ways no one could. Even in my lowest point. You pushed my away doubts and eased them. You have always reassured me through everything,
+you stayed, even in the days where I'm hard to love. Thank you so much for giving me love. And I want you to know that I'm also here for you. I'll always be;
+cheereing for you; listening to all your pain and sorrow, and even if you're quiet. I'm always here, ready to do everything for you. I'll be here, waiting
+with open arms. I'll be here everytime you'll need a shoulder to cry on. Through your high and lows, I'll be here loving you whole heartedly.
+</p>
+<p>
+Today, we celebrate you. Not because its your birthday, but, the world is brighter with you in it. From the moment we met, you’ve been the most precious 
+part of my world. This letter is just a small way to say. Thank you for being in my life.
+      You make everyone's day sweeter, and my heart fuller. I’ll cherish every moment with you. Always remember that everyone loves you. Especially me. I love you so much JI. From the moon and back. 
+And from the deepest parts of my heart and soul. One day we'll explore the universe together. 
+</p>
+<p>
+Again, happy birthday my love. Enjoy the rest of your day. <3
+    </p>
+
+    <p class="signature">Forever yours,<br>Sky <3</p>
+
+  </div>
+
+</body>
+</html>
+
